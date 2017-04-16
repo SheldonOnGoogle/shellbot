@@ -72,7 +72,7 @@ var controller = Botkit.slackbot({
     scopes: ['bot'],
     studio_token: process.env.studio_token,
     studio_command_uri: process.env.studio_command_uri,
-    json_file_store: __dirname + '/.db/' // store user data in a simple JSON format
+    json_file_store: __dirname + '/.db/', // store user data in a simple JSON format
 });
 
 controller.startTicking();
@@ -131,6 +131,7 @@ if (process.env.studio_token) {
             debug('Botkit Studio: ', err);
         });
     });
+
 } else {
     console.log('~~~~~~~~~~');
     console.log('NOTE: Botkit Studio functionality has not been enabled');
